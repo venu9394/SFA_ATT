@@ -1,0 +1,39 @@
+1st run get employee_sfa which is from sfa for geting employee list 
+2nd run read service bulk which is from sfa for getting attendance data 
+3rd run qurywhich is in  monthattadance text -run in test server;
+
+
+DROP TABLE IF EXISTS `hclhrm_prod_sfa`.`sfa_fsmaster`;
+CREATE TABLE  `hclhrm_prod_sfa`.`sfa_fsmaster` (
+  `EMPLOYEEID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `FSNAME` varchar(45) NOT NULL,
+  `RESIGNED_DATE` date NOT NULL,
+  `STATUS` varchar(45) NOT NULL,
+  PRIMARY KEY (`EMPLOYEEID`)
+) ENGINE=InnoDB AUTO_INCREMENT=303466 DEFAULT CHARSET=latin1;
+
+
+
+DROP TABLE IF EXISTS `hclhrm_prod_sfa`.`tbl_sfa_attendance`;
+CREATE TABLE  `hclhrm_prod_sfa`.`tbl_sfa_attendance` (
+  `EMPLOYEEID` int(10) unsigned NOT NULL,
+  `TRANSACTIONDATE` date NOT NULL,
+  `FIN` varchar(45) NOT NULL,
+  `LOUT` varchar(45) NOT NULL,
+  `NET` varchar(45) NOT NULL,
+  `WORK_TYPE` varchar(45) NOT NULL,
+  `STATUS` varchar(45) NOT NULL,
+  PRIMARY KEY (`EMPLOYEEID`,`TRANSACTIONDATE`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+DROP TABLE IF EXISTS `hclhrm_prod_sfa`.`tbl_employee_manual_attendance_sfa`;
+CREATE TABLE  `hclhrm_prod_sfa`.`tbl_employee_manual_attendance_sfa` (
+  `SNO` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `EMPLOYEEID` int(10) unsigned NOT NULL,
+  `TRANSACTIONDATE` date NOT NULL,
+  `DAYTYPE` varchar(45) DEFAULT NULL,
+  `DAYSTATUS` varchar(5) NOT NULL DEFAULT 'P',
+  `STATUS` int(10) unsigned NOT NULL DEFAULT '1001',
+  `LUPDATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`SNO`)
+) ENGINE=InnoDB AUTO_INCREMENT=3214 DEFAULT CHARSET=latin1;

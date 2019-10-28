@@ -1,0 +1,300 @@
+SELECT
+EMPLOYEEID,
+IFNULL(MAX(CASE WHEN transactiondate='2018-02-26' THEN STATUS END), '--') '26-02-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-02-27' THEN STATUS END),'--')'27-02-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-02-28' THEN STATUS END),'--') '28-02-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-01' THEN STATUS END),'--') '01-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-02' THEN STATUS END),'--') '02-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-03' THEN STATUS END),'--')'03-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-04' THEN STATUS END),'--')'04-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-05' THEN STATUS END),'--')'05-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-06' THEN STATUS END),'--')'06-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-07' THEN STATUS END),'--')'07-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-08' THEN STATUS END),'--')'08-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-09' THEN STATUS END),'--')'09-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-10' THEN STATUS END),'--')'10-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-11' THEN STATUS END),'--')'11-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-12' THEN STATUS END),'--')'12-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-13' THEN STATUS END),'--')'13-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-14' THEN STATUS END),'--')'14-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-15' THEN STATUS END),'--')'15-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-16' THEN STATUS END),'--')'16-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-17' THEN STATUS END),'--')'17-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-18' THEN STATUS END),'--')'18-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-19' THEN STATUS END),'--')'19-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-20' THEN STATUS END),'--')'20-03-2018',
+IFNULL (MAX(CASE WHEN transactiondate='2018-03-21' THEN STATUS END),'--')'21-03-2018'
+
+FROM hclhrm_prod_sfa.tbl_sfa_attendance
+where transactiondate between '2018-02-26' and curdate()
+GROUP BY EMPLOYEEID;
+
+
+
+
+ // query 
+ SELECT * FROM hclhrm_prod_sfa.tbl_sfa_attendance t;
+
+SELECT t.employeeid,
+t1.daystatus  as   '27-10-2017',
+t2.daystatus  as   '28-10-2017',
+t3.daystatus  as   '29-10-2017',
+t4.daystatus  as   '30-10-2017',
+t5.daystatus  as   '31-10-2017',
+t6.daystatus  as   '01-11-2017',
+t7.daystatus  as   '02-11-2017',
+t8.daystatus  as   '03-11-2017',
+t9.daystatus  as   '04-11-2017',
+t10.daystatus   as '05-11-2017',
+t11.daystatus   as '06-11-2017',
+t12.daystatus   as '07-11-2017',
+t13.daystatus   as '08-11-2017',
+t14.daystatus   as '09-11-2017',
+t15.daystatus   as '10-11-2017',
+t16.daystatus   as '11-11-2017',
+t17.daystatus   as '12-11-2017',
+t18.daystatus   as '13-11-2017',
+t19.daystatus   as '14-11-2017',
+t20.daystatus   as '15-11-2017',
+t21.daystatus   as '16-11-2017',
+t22.daystatus   as '17-11-2017',
+t23.daystatus   as '18-11-2017',
+t24.daystatus   as '19-11-2017',
+t25.daystatus   as '20-11-2017',
+t26.daystatus   as '21-11-2017',
+t27.daystatus   as '22-11-2017',
+t28.daystatus   as '23-11-2017',
+t29.daystatus   as '24-11-2017',
+t30.daystatus   as '25-11-2017'
+
+
+
+FROM hclhrm_prod_sfa.tbl_sfa_attendance t ,
+hclhrm_prod_sfa.tbl_sfa_attendance t1,
+hclhrm_prod_sfa.tbl_sfa_attendance t2,
+hclhrm_prod_sfa.tbl_sfa_attendance t3,
+hclhrm_prod_sfa.tbl_sfa_attendance t4,
+hclhrm_prod_sfa.tbl_sfa_attendance t5,
+hclhrm_prod_sfa.tbl_sfa_attendance t6,
+hclhrm_prod_sfa.tbl_sfa_attendance t7,
+hclhrm_prod_sfa.tbl_sfa_attendance t8,
+hclhrm_prod_sfa.tbl_sfa_attendance t9,
+hclhrm_prod_sfa.tbl_sfa_attendance t10,
+hclhrm_prod_sfa.tbl_sfa_attendance t11,
+hclhrm_prod_sfa.tbl_sfa_attendance t12,
+hclhrm_prod_sfa.tbl_sfa_attendance t13,
+hclhrm_prod_sfa.tbl_sfa_attendance t14,
+hclhrm_prod_sfa.tbl_sfa_attendance t15,
+hclhrm_prod_sfa.tbl_sfa_attendance t16,
+hclhrm_prod_sfa.tbl_sfa_attendance t17,
+hclhrm_prod_sfa.tbl_sfa_attendance t18,
+hclhrm_prod_sfa.tbl_sfa_attendance t19,
+hclhrm_prod_sfa.tbl_sfa_attendance t20,
+hclhrm_prod_sfa.tbl_sfa_attendance t21,
+hclhrm_prod_sfa.tbl_sfa_attendance t22,
+hclhrm_prod_sfa.tbl_sfa_attendance t23,
+hclhrm_prod_sfa.tbl_sfa_attendance t24,
+hclhrm_prod_sfa.tbl_sfa_attendance t25,
+hclhrm_prod_sfa.tbl_sfa_attendance t26,
+hclhrm_prod_sfa.tbl_sfa_attendance t27,
+hclhrm_prod_sfa.tbl_sfa_attendance t28,
+hclhrm_prod_sfa.tbl_sfa_attendance t29,
+hclhrm_prod_sfa.tbl_sfa_attendance t30
+
+where 
+t1.transactiondate=     '2017-10-27'
+and t2.transactiondate= '2017-10-28'
+and t3.transactiondate= '2017-10-29'
+and t4.transactiondate= '2017-10-30'
+and t5.transactiondate= '2017-10-31'
+and t6.transactiondate= '2017-11-01'
+and t7.transactiondate= '2017-11-02'
+and t8.transactiondate= '2017-11-03'
+and t9.transactiondate= '2017-11-04'
+and t10.transactiondate='2017-11-05'
+and t11.transactiondate='2017-11-06'
+and t12.transactiondate='2017-11-07'
+and t13.transactiondate='2017-11-08'
+and t14.transactiondate='2017-11-09'
+and t15.transactiondate='2017-11-10'
+and t16.transactiondate='2017-11-11'
+and t17.transactiondate='2017-11-12'
+and t18.transactiondate='2017-11-13'
+and t19.transactiondate='2017-11-14'
+and t20.transactiondate='2017-11-15'
+and t21.transactiondate='2017-11-16'
+and t22.transactiondate='2017-11-17'
+and t23.transactiondate='2017-11-18'
+and t24.transactiondate='2017-11-19'
+and t25.transactiondate='2017-11-20'
+and t26.transactiondate='2017-11-21'
+and t27.transactiondate='2017-11-22'
+and t28.transactiondate='2017-11-23'
+and t29.transactiondate='2017-11-24'
+and t30.transactiondate='2017-11-25'
+
+
+and t.employeeid=t1.employeeid
+and t.employeeid=t2.employeeid
+and t.employeeid=t3.employeeid
+and t.employeeid=t4.employeeid
+and t.employeeid=t5.employeeid
+and t.employeeid=t6.employeeid
+and t.employeeid=t7.employeeid
+and t.employeeid=t8.employeeid
+and t.employeeid=t9.employeeid
+and t.employeeid=t10.employeeid
+and t.employeeid=t11.employeeid
+and t.employeeid=t12.employeeid
+and t.employeeid=t13.employeeid
+and t.employeeid=t14.employeeid
+and t.employeeid=t15.employeeid
+and t.employeeid=t16.employeeid
+and t.employeeid=t17.employeeid
+and t.employeeid=t18.employeeid
+and t.employeeid=t19.employeeid
+and t.employeeid=t20.employeeid
+and t.employeeid=t21.employeeid
+and t.employeeid=t22.employeeid
+and t.employeeid=t23.employeeid
+and t.employeeid=t24.employeeid
+and t.employeeid=t25.employeeid
+and t.employeeid=t26.employeeid
+and t.employeeid=t27.employeeid
+and t.employeeid=t28.employeeid
+and t.employeeid=t29.employeeid
+and t.employeeid=t30.employeeid
+
+group by t.employeeid;;
+
+
+
+SELECT t.employeeid,
+t1.daystatus  as   '27-10-2017',
+t2.daystatus  as   '28-10-2017',
+t3.daystatus  as   '29-10-2017',
+t4.daystatus  as   '30-10-2017',
+t5.daystatus  as   '31-10-2017',
+t6.daystatus  as   '01-11-2017',
+t7.daystatus  as   '02-11-2017',
+t8.daystatus  as   '03-11-2017',
+t9.daystatus  as   '04-11-2017',
+t10.daystatus   as '05-11-2017',
+t11.daystatus   as '06-11-2017',
+t12.daystatus   as '07-11-2017',
+t13.daystatus   as '08-11-2017',
+t14.daystatus   as '09-11-2017',
+t15.daystatus   as '10-11-2017',
+t16.daystatus   as '11-11-2017',
+t17.daystatus   as '12-11-2017',
+t18.daystatus   as '13-11-2017',
+t19.daystatus   as '14-11-2017',
+t20.daystatus   as '15-11-2017',
+t21.daystatus   as '16-11-2017',
+t22.daystatus   as '17-11-2017',
+t23.daystatus   as '18-11-2017',
+t24.daystatus   as '19-11-2017',
+t25.daystatus   as '20-11-2017',
+t26.daystatus   as '21-11-2017',
+t27.daystatus   as '22-11-2017',
+t28.daystatus   as '23-11-2017',
+t29.daystatus   as '24-11-2017',
+t30.daystatus   as '25-11-2017'
+
+
+FROM hclhrm_prod_sfa.tbl_sfa_attendance t ,
+hclhrm_prod_sfa.tbl_sfa_attendance t1,
+hclhrm_prod_sfa.tbl_sfa_attendance t2,
+hclhrm_prod_sfa.tbl_sfa_attendance t3,
+hclhrm_prod_sfa.tbl_sfa_attendance t4,
+hclhrm_prod_sfa.tbl_sfa_attendance t5,
+hclhrm_prod_sfa.tbl_sfa_attendance t6,
+hclhrm_prod_sfa.tbl_sfa_attendance t7,
+hclhrm_prod_sfa.tbl_sfa_attendance t8,
+hclhrm_prod_sfa.tbl_sfa_attendance t9,
+hclhrm_prod_sfa.tbl_sfa_attendance t10,
+hclhrm_prod_sfa.tbl_sfa_attendance t11,
+hclhrm_prod_sfa.tbl_sfa_attendance t12,
+hclhrm_prod_sfa.tbl_sfa_attendance t13,
+hclhrm_prod_sfa.tbl_sfa_attendance t14,
+hclhrm_prod_sfa.tbl_sfa_attendance t15,
+hclhrm_prod_sfa.tbl_sfa_attendance t16,
+hclhrm_prod_sfa.tbl_sfa_attendance t17,
+hclhrm_prod_sfa.tbl_sfa_attendance t18,
+hclhrm_prod_sfa.tbl_sfa_attendance t19,
+hclhrm_prod_sfa.tbl_sfa_attendance t20,
+hclhrm_prod_sfa.tbl_sfa_attendance t21,
+hclhrm_prod_sfa.tbl_sfa_attendance t22,
+hclhrm_prod_sfa.tbl_sfa_attendance t23,
+hclhrm_prod_sfa.tbl_sfa_attendance t24,
+hclhrm_prod_sfa.tbl_sfa_attendance t25,
+hclhrm_prod_sfa.tbl_sfa_attendance t26,
+hclhrm_prod_sfa.tbl_sfa_attendance t27,
+hclhrm_prod_sfa.tbl_sfa_attendance t28,
+hclhrm_prod_sfa.tbl_sfa_attendance t29,
+hclhrm_prod_sfa.tbl_sfa_attendance t30
+
+where
+t1.transactiondate=     '2017-10-27'
+and t2.transactiondate= '2017-10-28'
+and t3.transactiondate= '2017-10-29'
+and t4.transactiondate= '2017-10-30'
+and t5.transactiondate= '2017-10-31'
+and t6.transactiondate= '2017-11-01'
+and t7.transactiondate= '2017-11-02'
+and t8.transactiondate= '2017-11-03'
+and t9.transactiondate= '2017-11-04'
+and t10.transactiondate='2017-11-05'
+and t11.transactiondate='2017-11-06'
+and t12.transactiondate='2017-11-07'
+and t13.transactiondate='2017-11-08'
+and t14.transactiondate='2017-11-09'
+and t15.transactiondate='2017-11-10'
+and t16.transactiondate='2017-11-11'
+and t17.transactiondate='2017-11-12'
+and t18.transactiondate='2017-11-13'
+and t19.transactiondate='2017-11-14'
+and t20.transactiondate='2017-11-15'
+and t21.transactiondate='2017-11-16'
+and t22.transactiondate='2017-11-17'
+and t23.transactiondate='2017-11-18'
+and t24.transactiondate='2017-11-19'
+and t25.transactiondate='2017-11-20'
+and t26.transactiondate='2017-11-21'
+and t27.transactiondate='2017-11-22'
+and t28.transactiondate='2017-11-23'
+and t29.transactiondate='2017-11-24'
+and t30.transactiondate='2017-11-25'
+
+
+and t.employeeid=t1.employeeid
+and t.employeeid=t2.employeeid
+and t.employeeid=t3.employeeid
+and t.employeeid=t4.employeeid
+and t.employeeid=t6.employeeid
+and t.employeeid=t7.employeeid
+and t.employeeid=t8.employeeid
+and t.employeeid=t9.employeeid
+and t.employeeid=t10.employeeid
+and t.employeeid=t11.employeeid
+and t.employeeid=t12.employeeid
+and t.employeeid=t13.employeeid
+and t.employeeid=t14.employeeid
+and t.employeeid=t15.employeeid
+and t.employeeid=t16.employeeid
+and t.employeeid=t17.employeeid
+and t.employeeid=t18.employeeid
+and t.employeeid=t19.employeeid
+and t.employeeid=t20.employeeid
+and t.employeeid=t21.employeeid
+and t.employeeid=t22.employeeid
+and t.employeeid=t23.employeeid
+and t.employeeid=t24.employeeid
+and t.employeeid=t25.employeeid
+and t.employeeid=t26.employeeid
+and t.employeeid=t27.employeeid
+and t.employeeid=t28.employeeid
+and t.employeeid=t29.employeeid
+and t.employeeid=t30.employeeid
+
+group by t.employeeid;
